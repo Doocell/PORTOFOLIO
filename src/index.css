@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Neobrutalism Design System
+   All colors MUST be HSL. */
+
+@layer base {
+  :root {
+    /* Surfaces */
+    --background: 39 100% 95%;          /* cream #fef6e4 */
+    --foreground: 0 0% 0%;              /* pure black */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    /* Brand */
+    --primary: 45 93% 58%;              /* bold yellow #fcd34d */
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 24 95% 53%;            /* orange pop #f97316 */
+    --secondary-foreground: 0 0% 0%;
+
+    --accent: 217 91% 60%;              /* electric blue */
+    --accent-foreground: 0 0% 0%;
+
+    --pop-pink: 330 81% 70%;
+    --pop-mint: 152 76% 70%;
+    --pop-lilac: 258 90% 78%;
+
+    --muted: 39 60% 88%;
+    --muted-foreground: 0 0% 25%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 70% 45%;
+
+    --border: 0 0% 0%;                  /* always thick black */
+    --input: 0 0% 0%;
+    --ring: 0 0% 0%;
+
+    --radius: 0.25rem;
+
+    /* Brutal shadows */
+    --shadow-brutal-sm: 3px 3px 0 0 hsl(0 0% 0%);
+    --shadow-brutal: 6px 6px 0 0 hsl(0 0% 0%);
+    --shadow-brutal-lg: 10px 10px 0 0 hsl(0 0% 0%);
+    --shadow-brutal-xl: 14px 14px 0 0 hsl(0 0% 0%);
+
+    --sidebar-background: 39 100% 95%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 45 93% 58%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 39 60% 88%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 0%;
+    --sidebar-ring: 0 0% 0%;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 39 100% 95%;
+    --card: 0 0% 12%;
+    --card-foreground: 39 100% 95%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 39 100% 95%;
+    --primary: 45 93% 58%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 24 95% 53%;
+    --secondary-foreground: 0 0% 0%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 0%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 39 30% 80%;
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 39 100% 95%;
+    --input: 39 100% 95%;
+    --ring: 39 100% 95%;
+    --shadow-brutal-sm: 3px 3px 0 0 hsl(39 100% 95%);
+    --shadow-brutal: 6px 6px 0 0 hsl(39 100% 95%);
+    --shadow-brutal-lg: 10px 10px 0 0 hsl(39 100% 95%);
+    --shadow-brutal-xl: 14px 14px 0 0 hsl(39 100% 95%);
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 39 100% 95%;
+    --sidebar-primary: 45 93% 58%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 18%;
+    --sidebar-accent-foreground: 39 100% 95%;
+    --sidebar-border: 39 100% 95%;
+    --sidebar-ring: 39 100% 95%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image:
+      linear-gradient(to right, hsl(0 0% 0% / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(0 0% 0% / 0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .brutal-border {
+    @apply border-[3px] border-foreground;
+  }
+  .brutal-border-thick {
+    @apply border-[4px] border-foreground;
+  }
+  .brutal-shadow-sm {
+    box-shadow: var(--shadow-brutal-sm);
+  }
+  .brutal-shadow {
+    box-shadow: var(--shadow-brutal);
+  }
+  .brutal-shadow-lg {
+    box-shadow: var(--shadow-brutal-lg);
+  }
+  .brutal-shadow-xl {
+    box-shadow: var(--shadow-brutal-xl);
+  }
+  .brutal-card {
+    @apply bg-card brutal-border brutal-shadow rounded-[var(--radius)] transition-all duration-150;
+  }
+  .brutal-hover {
+    @apply transition-all duration-150 hover:-translate-x-[3px] hover:-translate-y-[3px];
+  }
+  .brutal-hover:hover {
+    box-shadow: var(--shadow-brutal-lg);
+  }
+  .brutal-press:active {
+    @apply translate-x-[3px] translate-y-[3px];
+    box-shadow: 0 0 0 0 hsl(var(--foreground)) !important;
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 2px hsl(var(--foreground));
+    color: transparent;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
