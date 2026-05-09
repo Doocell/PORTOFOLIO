@@ -162,7 +162,7 @@ export const experiences: Experience[] = [
     id: "e4", position: "Creative Economy Expert Staff", company: "Himpunan Mahasiswa Ilmu Komputer", location: "Universitas Negeri Semarang",
     startDate: "2025-02", endDate: "2026-02",
     description: "Contributed to the Creative Economy Division of the UNNES Computer Science Student Association, focusing on developing work programs based on creativity, entrepreneurship, and digital business. Involved in developing activity ideas, internal coordination, program implementation, and cross-committee collaboration. This experience strengthened my skills in communication, teamwork, activity management, and creative concept development.",
-    achievements: ["Sie bla bla", "Sie bla bla", "Sie bla bla"],
+    achievements: ["Koordinator Peralatan Dan Kebutuhan WorkShop Digital Business - 2024", "Staff Kegiatan Interface 2025- Sie Perkap", "Staff Kegiatan Computer Science & Sport 2025- Sie Perkap"],
   },
 ];
 
