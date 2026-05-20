@@ -26,7 +26,7 @@ const img = (seed: string, w = 800, h = 600) => `https://images.unsplash.com/pho
 export const profile = {
   fullName: "Dany Risky Ardiansyah",
   role: "Business Planner & UI Designer",
-  bio: "I am a student of Semarang State University class of 2024 who has an interest in UI/UX Design, business design, digital business, and developing technology-based business ideas..",
+  bio: "I am a student of Semarang State University class of 2024 who has an interest in UI/UX Design, business design, digital business, and eloping technology-based business ideas..",
   location: "Semarang, Indonesia",
   email: "danyrizkya@gmail.com",
   phone: "+62 877-7172-7353",

@@ -29,7 +29,7 @@ export function Navbar() {
       <nav className="container flex items-center justify-between h-16 md:h-20" aria-label="Main">
         <Link to="/" className="font-display text-xl md:text-2xl flex items-center gap-2 group">
           <span className="inline-flex items-center justify-center w-9 h-9 bg-primary brutal-border brutal-shadow-sm rounded-[var(--radius)] group-hover:animate-wiggle">D</span>
-          <span>DANY.DEV</span>
+          <span>DANY RISKY ARDIANSYAH</span>
         </Link>
 
         <ul className="hidden lg:flex items-center gap-1">
