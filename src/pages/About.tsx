@@ -5,9 +5,9 @@ import { Code2, Palette, Database, Rocket } from "lucide-react";
 
 const services = [
   { Icon: Code2, title: "Frontend", desc: "React, Next.js, Tailwind, Framer Motion" },
-  { Icon: Database, title: "Backend", desc: "Node.js, Go, PostgreSQL, Redis" },
   { Icon: Palette, title: "Design", desc: "Figma, Design System, Branding" },
-  { Icon: Rocket, title: "DevOps", desc: "Docker, CI/CD, Vercel, Cloudflare" },
+  //{ Icon: Database, title: "Backend", desc: "Node.js, Go, PostgreSQL, Redis" },
+  //{ Icon: Rocket, title: "DevOps", desc: "Docker, CI/CD, Vercel, Cloudflare" },
 ];
 
 export default function About() {

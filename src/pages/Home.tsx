@@ -75,7 +75,7 @@ export default function Home() {
           {[
             { color: "primary" as const, title: "Web Apps", desc: "SaaS, dashboard, e-commerce — siap produksi dan bisa di-scale." },
             { color: "secondary" as const, title: "UI / UX Design", desc: "Desain antarmuka yang playful, jelas, dan punya karakter." },
-            { color: "mint" as const, title: "Backend & API", desc: "Arsitektur API yang rapi dengan PostgreSQL dan Node/Go." },
+            //{ color: "mint" as const, title: "Backend & API", desc: "Arsitektur API yang rapi dengan PostgreSQL dan Node/Go." },
           ].map((s) => (
             <BrutalCard key={s.title} color={s.color} hover className="p-6">
               <h3 className="font-display text-2xl mb-2">{s.title}</h3>
